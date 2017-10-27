@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>MyTravels</title> 
+<meta charset="UTF-8"> 
+<style>
+  #map {
+    height: 500px;
+    width: 1000px;
+  }
+</style>
+</head> 
+<body> 
+{% if token is defined %}
+	{{ token }}
+{% endif %}
+<!-- <div id="login">
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> 
+  </fb:login-button>
+</div> -->
+<!-- <div id="status"></div> -->
+<div id="map"></div>
+<div id="country_block"></div>
+<script src="http://mytravels.com/resources/ajax.js"></script>
+<script src="http://mytravels.com/resources/init.js"></script>
+<!-- <script src="http://mytravels.com/resources/fb.js"></script>
+ -->
+ <script type="text/javascript" src="http://mytravels.com/resources/map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry&language=en&key=AIzaSyBeT7o-DylyJwz6ctBjFshTLqKndaUqwuQ&callback=initMap">
+</script>
+<script>
+  initMap();
+</script>
+</body> 
+</html>
